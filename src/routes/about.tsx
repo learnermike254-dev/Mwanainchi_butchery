@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CategoryCarousel } from "@/components/CategoryCarousel";
 import { PageHero } from "@/components/PageHero";
-import interior from "@/assets/butchery-interior.jpg";
-import butcher from "@/assets/butcher-at-work.jpg";
+import interior from "@/assets/landing_images/butchery-interior.jpg";
+import butcher from "@/assets/landing_images/butcher-at-work.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({

@@ -11,7 +11,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import logoHeader from "@/assets/logo-header.png";
+import logoHeader from "@/assets/landing_images/logo-header.png";
 
 const links = [
   { to: "/", label: "Home", sw: "Nyumbani" },

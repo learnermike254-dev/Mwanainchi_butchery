@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDown, ChevronRight, MessageCircle, Truck, Leaf, Clock, Smartphone, Star, Quote, ShieldCheck, MapPin, Bike, UtensilsCrossed } from "lucide-react";
-import butcherImg from "@/assets/butcher-at-work.jpg";
+import butcherImg from "@/assets/landing_images/butcher-at-work.jpg";
 import { HeroVideo } from "@/components/HeroVideo";
 import { CategoryCarousel } from "@/components/CategoryCarousel";
 import { waOrderLink } from "@/lib/products";
