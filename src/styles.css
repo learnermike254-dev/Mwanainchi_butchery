@@ -1,0 +1,195 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-mahogany: var(--mahogany);
+  --color-mahogany-foreground: var(--mahogany-foreground);
+  --color-cream: var(--cream);
+  --color-whatsapp: var(--whatsapp);
+  --color-mpesa: var(--mpesa);
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Lato", system-ui, sans-serif;
+  --font-heading: "Montserrat", system-ui, sans-serif;
+  --font-accent: "Oswald", "Roboto Condensed", sans-serif;
+
+  --shadow-warm: 0 8px 24px -8px color-mix(in oklab, var(--mahogany) 25%, transparent);
+  --shadow-lift: 0 14px 40px -16px color-mix(in oklab, var(--primary) 35%, transparent);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Brand: Mwanainchi Butchery */
+  --background: oklch(0.972 0.022 80);          /* #FDF6EC cream parchment */
+  --foreground: oklch(0.22 0.04 40);             /* #2C1810 charcoal brown */
+
+  --card: oklch(0.985 0.012 80);                 /* #FFFAF4 warm white */
+  --card-foreground: oklch(0.22 0.04 40);
+
+  --popover: oklch(0.985 0.012 80);
+  --popover-foreground: oklch(0.22 0.04 40);
+
+  --primary: oklch(0.43 0.16 28);                /* #8B1A1A deep red */
+  --primary-foreground: oklch(0.985 0.012 80);
+
+  --secondary: oklch(0.94 0.025 70);
+  --secondary-foreground: oklch(0.34 0.07 40);
+
+  --muted: oklch(0.93 0.02 75);
+  --muted-foreground: oklch(0.5 0.04 45);        /* #7D5A4A dusty mocha */
+
+  --accent: oklch(0.62 0.16 45);                 /* #C45C2A terracotta */
+  --accent-foreground: oklch(0.985 0.012 80);
+
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.985 0.012 80);
+
+  --border: oklch(0.87 0.025 65);
+  --input: oklch(0.9 0.02 65);
+  --ring: oklch(0.43 0.16 28);
+
+  --mahogany: oklch(0.34 0.07 40);               /* #5C2D1A warm mahogany */
+  --mahogany-foreground: oklch(0.972 0.022 80);
+
+  --cream: oklch(0.972 0.022 80);
+
+  --success: oklch(0.5 0.11 155);                /* #2D6A4F savanna green */
+  --success-foreground: oklch(0.985 0.012 80);
+
+  --warning: oklch(0.82 0.13 85);                /* #E9C46A maize */
+  --warning-foreground: oklch(0.22 0.04 40);
+
+  --whatsapp: oklch(0.69 0.18 145);              /* #25D366 */
+  --mpesa: oklch(0.55 0.18 145);
+
+  --gradient-hero: linear-gradient(135deg, oklch(0.22 0.04 40 / 0.85), oklch(0.43 0.16 28 / 0.55));
+  --gradient-warm: linear-gradient(180deg, var(--cream), var(--card));
+}
+
+.dark {
+  --background: oklch(0.18 0.02 40);
+  --foreground: oklch(0.972 0.022 80);
+  --card: oklch(0.22 0.03 40);
+  --card-foreground: oklch(0.972 0.022 80);
+  --popover: oklch(0.22 0.03 40);
+  --popover-foreground: oklch(0.972 0.022 80);
+  --primary: oklch(0.55 0.18 28);
+  --primary-foreground: oklch(0.985 0.012 80);
+  --secondary: oklch(0.28 0.04 40);
+  --secondary-foreground: oklch(0.972 0.022 80);
+  --muted: oklch(0.28 0.04 40);
+  --muted-foreground: oklch(0.7 0.03 60);
+  --accent: oklch(0.62 0.16 45);
+  --accent-foreground: oklch(0.985 0.012 80);
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.985 0.012 80);
+  --border: oklch(0.3 0.04 40);
+  --input: oklch(0.3 0.04 40);
+  --ring: oklch(0.55 0.18 28);
+  --mahogany: oklch(0.34 0.07 40);
+  --mahogany-foreground: oklch(0.972 0.022 80);
+  --cream: oklch(0.972 0.022 80);
+  --success: oklch(0.55 0.13 155);
+  --success-foreground: oklch(0.985 0.012 80);
+  --warning: oklch(0.82 0.13 85);
+  --warning-foreground: oklch(0.22 0.04 40);
+  --whatsapp: oklch(0.69 0.18 145);
+  --mpesa: oklch(0.55 0.18 145);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.005em;
+  }
+
+  .font-accent { font-family: var(--font-accent); letter-spacing: 0.02em; }
+
+  /* Hand-drawn underline accent */
+  .accent-underline {
+    background-image: linear-gradient(transparent 70%, color-mix(in oklab, var(--accent) 45%, transparent) 70%);
+    background-size: 100% 100%;
+    padding: 0 0.1em;
+  }
+
+  /* Butcher-paper texture */
+  .paper-texture {
+    background-color: var(--cream);
+    background-image:
+      radial-gradient(circle at 20% 30%, color-mix(in oklab, var(--mahogany) 4%, transparent) 0, transparent 40%),
+      radial-gradient(circle at 80% 70%, color-mix(in oklab, var(--accent) 5%, transparent) 0, transparent 40%);
+  }
+}
+
+@layer utilities {
+  .container-page {
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) { .container-page { padding-inline: 2rem; } }
+
+  .section-y { padding-block: 3rem; }
+  @media (min-width: 768px) { .section-y { padding-block: 5rem; } }
+
+  .pulse-ring {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--whatsapp) 60%, transparent);
+    animation: pulseRing 2s infinite;
+  }
+  @keyframes pulseRing {
+    70% { box-shadow: 0 0 0 14px color-mix(in oklab, var(--whatsapp) 0%, transparent); }
+    100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--whatsapp) 0%, transparent); }
+  }
+}
